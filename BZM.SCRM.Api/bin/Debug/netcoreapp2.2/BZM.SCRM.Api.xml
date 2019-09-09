@@ -1,0 +1,2205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BZM.SCRM.Api</name>
+    </assembly>
+    <members>
+        <member name="T:BZM.SCRM.Api.Controllers.Common.CarBasValueController">
+            <summary>
+            车型基础数据
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.CarBasValueController.GetCarInfo(System.Int32,System.String,System.String)">
+            <summary>
+            获取车型基础数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.CarBasValueController.GetUseCarStockInfo">
+            <summary>
+            获取二手车库存信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BZM.SCRM.Api.Controllers.Common.TokenController">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:BZM.SCRM.Api.Controllers.Common.TokenController.Configuration">
+            <summary>
+            配置管理器
+            </summary>
+        </member>
+        <member name="F:BZM.SCRM.Api.Controllers.Common.TokenController._commonService">
+            <summary>
+            公共服务
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.TokenController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,BZM.SCRM.Application.Common.Contracts.ICommonService)">
+            <summary>
+            token
+            </summary>
+            <param name="configuration"></param>
+            <param name="commonService"></param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.TokenController.Token(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            请求领牌
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.TokenController.QiNiuToken">
+            <summary>
+            请求七牛领牌
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BZM.SCRM.Api.Controllers.Common.WeChatAuthController">
+            <summary>
+            微信授权
+            </summary>
+        </member>
+        <member name="F:BZM.SCRM.Api.Controllers.Common.WeChatAuthController._wxHelper">
+            <summary>
+            微信helper
+            </summary>
+        </member>
+        <member name="F:BZM.SCRM.Api.Controllers.Common.WeChatAuthController._commonService">
+            <summary>
+            公共服务
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.WeChatAuthController.#ctor(BZM.SCRM.Domain.Common.Util.WxHelper,BZM.SCRM.Application.Common.Contracts.ICommonService)">
+            <summary>
+            初始化
+            </summary>
+            <param name="wxHelper"></param>
+            <param name="commonService"></param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.WeChatAuthController.WxAuthorization(BZM.SCRM.Domain.Common.ReportModels.WxAuthorization)">
+            <summary>
+            统一网页授权
+            </summary>
+            <param name="authorization"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.WeChatAuthController.CardAuthorization(BZM.SCRM.Domain.Common.ReportModels.WxAuthorization)">
+            <summary>
+            轩宇券统一网页授权
+            </summary>
+            <param name="authorization"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.Common.WeChatAuthController.QRCodeAuthorization(BZM.SCRM.Domain.Common.ReportModels.WxAuthorization)">
+            <summary>
+            odm领券码统一网页授权
+            </summary>
+            <param name="authorization"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BZM.SCRM.Api.Controllers.SCRMControllerBase.ClientInfoProvider">
+            <summary>
+            客户主机信息
+            </summary>
+        </member>
+        <member name="P:BZM.SCRM.Api.Controllers.SCRMControllerBase.AbpSession">
+            <summary>
+            当前会话
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.#ctor">
+            <summary>
+            控制器基础类构造函数
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            执行前
+            </summary>
+        </member>
+        <member name="P:BZM.SCRM.Api.Controllers.SCRMControllerBase.FileLog">
+            <summary>
+            生成当前方法（action）路由的日志
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.ConvertArgumentsToJson(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            数据字典转为Json格式字符串
+            </summary>
+            <param name="arguments">字典参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.CheckModelState">
+            <summary>
+            验证模型状态
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.ContentResult(System.String,System.String)">
+            <summary>
+            返回原始内容结果
+            </summary>
+            <param name="content">数据</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.Success(System.String,System.Object,System.String)">
+            <summary>
+            返回成功消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="data">数据</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.Page(System.Object,Spring.Domains.Repositories.Page,System.String,System.String)">
+            <summary>
+            返回分页消息
+            </summary>
+            <param name="data">数据</param>
+            <param name="page">分页对象</param>
+            <param name="message">消息</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.Fail(System.String,System.String,System.String)">
+            <summary>
+            返回失败消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="description">详细描述</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.Fail(System.String,System.String,System.Collections.Generic.List{Spring.ApplicationServices.ErrorMessage},System.String)">
+            <summary>
+            返回失败消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="description">详细描述</param>
+            <param name="errors">错误信息数组</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.Fail(System.String,Spring.ApplicationServices.StateCode,System.Collections.Generic.List{Spring.ApplicationServices.ErrorMessage},System.String)">
+            <summary>
+            返回失败消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="stateCode">状态码</param>
+            <param name="errors">错误信息数组</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Controllers.SCRMControllerBase.Fail(System.String,System.String,Spring.ApplicationServices.StateCode,System.Collections.Generic.List{Spring.ApplicationServices.ErrorMessage},System.String)">
+            <summary>
+            返回失败消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="description">详细描述</param>
+            <param name="stateCode">状态码</param>
+            <param name="errors">错误信息数组</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.filter.AuthorizationFilter.ValidateHeader(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            验证头部信息
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.filter.AuthorizationFilter.Fail(System.String,System.String,Spring.ApplicationServices.StateCode,System.Collections.Generic.List{Spring.ApplicationServices.ErrorMessage},System.String)">
+            <summary>
+            返回失败消息
+            </summary>
+            <param name="message">消息</param>
+            <param name="description">详细描述</param>
+            <param name="stateCode">状态码</param>
+            <param name="errors">错误信息数组</param>
+            <param name="contentType">内容类型</param>
+        </member>
+        <member name="T:BZM.SCRM.Api.filter.RemoveVersionParameterFilter">
+            <summary>
+            移除swagger版本
+            </summary>
+        </member>
+        <member name="T:BZM.SCRM.Api.filter.ReplaceDocVersionParameterFilter">
+            <summary>
+            替换swagger文档版本参数
+            </summary>
+        </member>
+        <member name="T:BZM.SCRM.Api.Startup.AuthorizeAttribute">
+            <summary>
+            授权认证属性
+            </summary>
+        </member>
+        <member name="T:BZM.SCRM.Api.Startup.SignalRHub">
+            <summary>
+            集线器
+            </summary>
+        </member>
+        <member name="F:BZM.SCRM.Api.Startup.SignalRHub.UserList">
+            <summary>
+            用户集合
+            </summary>
+        </member>
+        <member name="F:BZM.SCRM.Api.Startup.SignalRHub.MessageList">
+            <summary>
+            消息集合
+            </summary>
+        </member>
+        <member name="F:BZM.SCRM.Api.Startup.SignalRHub._chatHelper">
+            <summary>
+            聊天helper
+            </summary>
+        </member>
+        <member name="F:BZM.SCRM.Api.Startup.SignalRHub._crmEvaMstrRepository">
+            <summary>
+            消息仓储
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.#ctor(BZM.SCRM.Domain.Common.Chat.ChatHelper,SCRM.Domain.ServiceManagement.Repositories.ICrmEvaMstrRepository)">
+            <summary>
+            初始化
+            </summary>
+            <param name="chatHelper">聊天helper</param>
+            <param name="crmEvaMstrRepository">消息仓储</param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.Send(System.String,System.String)">
+            <summary>
+            客户发送消息
+            </summary>
+            <param name="receiveMessage"></param>
+            <param name="bgNo"></param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.SendCus(System.String,System.String)">
+            <summary>
+            后台给发送客户消息
+            </summary>
+            <param name="receiveMessage"></param>
+            <param name="bgNo"></param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.UpdateMessageStatus(System.String)">
+            <summary>
+            网页端更新消息状态
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.UpdateOnlineMessageStatus(System.String,System.String)">
+            <summary>
+            后台系统更新消息状态
+            </summary>
+            <param name="userId"></param>
+            <param name="toUserId"></param>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.GetOnlineList(System.String)">
+            <summary>
+            获取客户消息列表
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.GetOnlineListByPage(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取在线用户消息分页
+            </summary>
+            <param name="userId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.OnConnectedAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.GetUserInfo(System.String)">
+            <summary>
+            获取顾问信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.GetUserConnectionIds">
+            <summary>
+            获取在线用户连接id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.GetMessageList(System.String,System.String,System.Int32,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            微信端获取消息
+            </summary>
+            <param name="userId"></param>
+            <param name="toUserId"></param>
+            <param name="iDisplayStart"></param>
+            <param name="iDisplayLength"></param>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.GetMessageListForEmployee(System.String,System.String,System.Int32,System.Int32,System.Nullable{System.DateTime})">
+            <summary>
+            获取用户消息(顾问)
+            </summary>
+            <param name="userId"></param>
+            <param name="toUserId"></param>
+            <param name="iDisplayStart"></param>
+            <param name="iDisplayLength"></param>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.GetMessageHistory(System.String,System.Collections.Generic.List{BZM.SCRM.Domain.Common.Chat.OnlineUserInfo})">
+            <summary>
+            获取消息记录
+            </summary>
+            <param name="toUserId"></param>
+            <param name="userList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.SignalRHub.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            断线
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BZM.SCRM.Api.Startup.Startup">
+            <summary>
+            启动器
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            配置服务
+            </summary>
+            <param name="services">服务池</param>
+            <returns></returns>
+        </member>
+        <member name="T:BZM.SCRM.Api.Startup.WebApiExceptionFilterAttribute">
+            <summary>
+            异常处理
+            </summary>
+        </member>
+        <member name="M:BZM.SCRM.Api.Startup.WebApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            重写基类的异常处理方法
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController">
+            <summary>
+            素材控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController._cmsMaterialMstrService">
+            <summary>
+            素材服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController._cmsMaterialMstrRepository">
+            <summary>
+            素材仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController.#ctor(SCRM.Application.InformationActivitie.Contracts.ICmsMaterialMstrService,SCRM.Domain.InformationActivitie.Repositories.ICmsMaterialMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="cmsMaterialMstrService">素材服务</param>
+            <param name="cmsMaterialMstrRepository">素材仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController.GetMaterialMstrPageList(SCRM.Domain.InformationActivitie.Queries.CmsMaterialMstrQuery)">
+            <summary>
+            获取素材分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController.GetMaterialMstrInfo(System.String)">
+            <summary>
+            获取素材详情
+            </summary>
+            <param name="materialId">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController.SaveMaterialInfo(SCRM.Application.InformationActivitie.Dtos.CmsMaterialMstrDto)">
+            <summary>
+            保存素材信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController.DelMaterialInfo(System.String)">
+            <summary>
+            删除素材信息
+            </summary>
+            <param name="materialIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController.GetMaterialCommentPageList(SCRM.Domain.InformationActivitie.Queries.CmsMaterialMstrQuery)">
+            <summary>
+            获取资讯的评论未读信息数列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialMstrController.UpdateMaterialInfoStatus(SCRM.Domain.InformationActivitie.Queries.CmsMaterialMstrQuery)">
+            <summary>
+            更改资讯状态/轮播
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController">
+            <summary>
+            素材类型控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController._cmsMaterialTypeService">
+            <summary>
+            素材类型服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController._cmsMaterialTypeRepository">
+            <summary>
+            素材类型仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController.#ctor(SCRM.Application.InformationActivitie.Contracts.ICmsMaterialTypeService,SCRM.Domain.InformationActivitie.Repositories.ICmsMaterialTypeRepository)">
+            <summary>
+            初始化控制器
+            <param name="cmsMaterialTypeService">素材类型服务</param>
+            <param name="cmsMaterialTypeRepository">素材类型仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController.GetMaterialTypePageList(SCRM.Domain.InformationActivitie.Queries.CmsMaterialTypeQuery)">
+            <summary>
+            获取素材类型分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController.GetMaterialTypeList(SCRM.Domain.InformationActivitie.Queries.CmsMaterialTypeQuery)">
+            <summary>
+            获取素材类型列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController.GetMaterialTypeInfo(System.String)">
+            <summary>
+            获取素材类型详情
+            </summary>
+            <param name="materialTypeId">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController.SaveMaterialTypeInfo(SCRM.Application.InformationActivitie.Dtos.CmsMaterialTypeDto)">
+            <summary>
+            保存素材类型信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.CmsMaterialTypeController.DelMaterialTypeInfo(System.String)">
+            <summary>
+            删除素材类型信息
+            </summary>
+            <param name="materialTypeIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.InformationActivitie.WctCommentMstrController">
+            <summary>
+            评论控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.InformationActivitie.WctCommentMstrController._wctCommentMstrService">
+            <summary>
+            评论服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.InformationActivitie.WctCommentMstrController._wctCommentMstrRepository">
+            <summary>
+            评论仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.WctCommentMstrController.#ctor(SCRM.Application.InformationActivitie.Contracts.IWctCommentMstrService,SCRM.Domain.InformationActivitie.Repositories.IWctCommentMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctCommentMstrService">评论服务</param>
+            <param name="wctCommentMstrRepository">评论仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.WctCommentMstrController.GetCommentListByPage(SCRM.Domain.InformationActivitie.Queries.WctCommentMstrQuery)">
+            <summary>
+            获取评论分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.WctCommentMstrController.ReplyComment(SCRM.Domain.InformationActivitie.Queries.WctCommentMstrQuery)">
+            <summary>
+            回复评论
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.WctCommentMstrController.DelCommentInfo(SCRM.Domain.InformationActivitie.Queries.WctCommentMstrQuery)">
+            <summary>
+            删除评论
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.InformationActivitie.WctCommentMstrController.UpdateCommentStatus(System.String)">
+            <summary>
+            更新评论状态
+            </summary>
+            <param name="materialId">资讯id</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.InvInventoryController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.InvInventoryController._invInventoryService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.InvInventoryController.#ctor(SCRM.Application.MallManagement.Contracts.IInvInventoryService)">
+            <summary>
+            初始化控制器
+            <param name="invInventoryService">服务</param>
+            </summary>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.MdmGoodsClassController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.MdmGoodsClassController._mdmGoodsClassService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsClassController.#ctor(SCRM.Application.MallManagement.Contracts.IMdmGoodsClassService,SCRM.Domain.MallManagement.Repositories.IMdmGoodsClassRepository)">
+            <summary>
+            初始化控制器
+            <param name="mdmGoodsClassService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsClassController.GetGoodClassList">
+            <summary>
+            获取商品分类数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsClassController.GetGoodClassByParentId(System.Int32)">
+            <summary>
+            获取下级分类数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsClassController.SaveGoodsClass(SCRM.Application.MallManagement.Dtos.MdmGoodsClassDto)">
+            <summary>
+            保存分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsClassController.DeleteGoodsClass(System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.MdmGoodsListController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.MdmGoodsListController._mdmGoodsListService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.#ctor(SCRM.Application.MallManagement.Contracts.IMdmGoodsListService,SCRM.Domain.MallManagement.Repositories.IMdmGoodsListRepository)">
+            <summary>
+            初始化控制器
+            <param name="mdmGoodsListService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.GetErpGoodsInfoList(BZM.SCRM.Domain.MallManagement.ReportModels.GoodsInfoInputModel)">
+            <summary>
+            获取erp商品信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.SaveErpGoodsInfo(BZM.SCRM.Domain.MallManagement.ReportModels.GoodsInfoListModel)">
+            <summary>
+            保存erp商品信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.PutAwayGoods(BZM.SCRM.Domain.MallManagement.ReportModels.GoodsInfoListModel)">
+            <summary>
+            erp商品上架
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.OffRackGoods(System.String)">
+            <summary>
+            erp商品下架
+            </summary>
+            <param name="goodsId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.GetGoodsInfoPageList(SCRM.Domain.MallManagement.Queries.MdmGoodsListQuery)">
+            <summary>
+            获取商品分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.GetGoodsInfoById(System.String)">
+            <summary>
+            获取商品信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.SetGoodsInfoStatus(System.String)">
+            <summary>
+            商品上架/下架
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsListController.SaveGoodsInfo(SCRM.Application.MallManagement.Dtos.MdmGoodsListDto)">
+            <summary>
+            保存商品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.MdmGoodsMstrController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.MdmGoodsMstrController._mdmGoodsMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsMstrController.#ctor(SCRM.Application.MallManagement.Contracts.IMdmGoodsMstrService,SCRM.Domain.MallManagement.Repositories.IMdmGoodsMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="mdmGoodsMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsMstrController.GetMsGoodsPageList(SCRM.Domain.MallManagement.Queries.MdmGoodsMstrQuery)">
+            <summary>
+            获取秒杀商品数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsMstrController.GetMsGoodsInfo(System.String)">
+            <summary>
+            获取秒杀商品
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsMstrController.GetGoodsSpecById(System.String)">
+            <summary>
+            获取商品规格
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsMstrController.SaveMsGoods(System.Collections.Generic.List{SCRM.Application.MallManagement.Dtos.MdmGoodsMstrDto})">
+            <summary>
+            保存秒杀商品
+            </summary>
+            <param name="mdmGoodsMstrDtos"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.MdmGoodsPropertyMstrController">
+            <summary>
+            控制器(商品属性弃用)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.MdmGoodsPropertyMstrController._mdmGoodsPropertyMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsPropertyMstrController.#ctor(SCRM.Application.MallManagement.Contracts.IMdmGoodsPropertyMstrService)">
+            <summary>
+            初始化控制器
+            <param name="mdmGoodsPropertyMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsPropertyMstrController.GetPropertyList(System.String)">
+            <summary>
+            获取商品分类属性
+            </summary>
+            <param name="goodsClassId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsPropertyMstrController.SaveGoodsProperty(SCRM.Application.MallManagement.Dtos.MdmGoodsPropertyMstrDto)">
+            <summary>
+            保存商品属性
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsPropertyMstrController.DelGoodsProperty(System.String)">
+            <summary>
+            删除商品属性
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.MdmGoodsSplController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.MdmGoodsSplController._mdmGoodsSplService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.MdmGoodsSplController.#ctor(SCRM.Application.MallManagement.Contracts.IMdmGoodsSplService)">
+            <summary>
+            初始化控制器
+            <param name="mdmGoodsSplService">服务</param>
+            </summary>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.TxnSoDetController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.TxnSoDetController._txnSoDetService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.TxnSoDetController.#ctor(SCRM.Application.MallManagement.Contracts.ITxnSoDetService)">
+            <summary>
+            初始化控制器
+            <param name="txnSoDetService">服务</param>
+            </summary>
+        </member>
+        <member name="T:SCRM.Controllers.MallManagement.TxnSoMstrController">
+            <summary>
+            控制器(订单：txn_so_mstr)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.MallManagement.TxnSoMstrController._txnSoMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.TxnSoMstrController.#ctor(SCRM.Application.MallManagement.Contracts.ITxnSoMstrService,SCRM.Domain.MallManagement.Repositories.ITxnSoMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="txnSoMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.TxnSoMstrController.GetOrderPageList(SCRM.Domain.MallManagement.Queries.TxnSoMstrQuery)">
+            <summary>
+            获取订单分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.TxnSoMstrController.GetOrderInfoById(System.String)">
+            <summary>
+            查看数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.TxnSoMstrController.OrderDelivery(System.String,System.String)">
+            <summary>
+            订单发货
+            </summary>
+            <param name="soNo">订单编号</param>
+            <param name="expressNo">快递单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.MallManagement.TxnSoMstrController.OrderTake(System.String,System.String)">
+            <summary>
+            订单收货
+            </summary>
+            <param name="soNo">订单编号</param>
+            <param name="orderStatus">订单状态</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.AptDriveConfigController">
+            <summary>
+            控制器(预约试驾：apt_drive_config)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.AptDriveConfigController._aptDriveConfigService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.AptDriveConfigController.#ctor(SCRM.Application.ServiceManagement.Contracts.IAptDriveConfigService)">
+            <summary>
+            初始化控制器
+            <param name="aptDriveConfigService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.AptDriveConfigController.GetAptDriveCarList">
+            <summary>
+            获取试驾车型数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.AptDriveConfigController.SaveDriveCarSubtypeInfo(System.Collections.Generic.List{SCRM.Application.ServiceManagement.Dtos.AptDriveConfigDto})">
+            <summary>
+            保存试驾车型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CarFinancePolicyController">
+            <summary>
+            控制器(金融政策：CAR_FINANCE_POLICY)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CarFinancePolicyController._carFinancePolicyService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CarFinancePolicyController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICarFinancePolicyService,SCRM.Domain.ServiceManagement.Repositories.ICarFinancePolicyRepository)">
+            <summary>
+            初始化控制器
+            <param name="carFinancePolicyService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CarFinancePolicyController.GetFinancePolicyList(SCRM.Domain.ServiceManagement.Queries.CarFinancePolicyQuery)">
+            <summary>
+            分页获取金融政策信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CarFinancePolicyController.GetOptionalTagList(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            获取已选和可选标签
+            </summary>
+            <param name="code"></param>
+            <param name="level"></param>
+            <param name="subCode"></param>
+            <param name="vin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CarFinancePolicyController.GetCarPolicyInfo(System.String)">
+            <summary>
+            根据id获取金融政策信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CarFinancePolicyController.SaveCarPolicyInfo(SCRM.Application.ServiceManagement.Dtos.CarFinancePolicyDto)">
+            <summary>
+            保存金融政策信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CarFinancePolicyController.DeleteCarPolicyInfo(System.String)">
+            <summary>
+            根据id获取金融政策信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController">
+            <summary>
+            控制器(预约配置：CRM_APT_CONFIG_MSTR)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController._crmAptConfigMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICrmAptConfigMstrService,SCRM.Domain.ServiceManagement.Repositories.ICrmAptConfigMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="crmAptConfigMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController.GetAptConfigPageList(SCRM.Domain.ServiceManagement.Queries.CrmAptConfigMstrQuery)">
+            <summary>
+            分页获取预约配置信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController.GetCrmAptConfigInfo(System.String)">
+            <summary>
+            根据id获取预约配置信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController.VerifyPeriodIsConfig(System.Int32)">
+            <summary>
+            验证集团是否已配置预约时间段
+            </summary>
+            <param name="aptType">预约类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController.SaveCrmAptConfig(SCRM.Application.ServiceManagement.Dtos.CrmAptConfigMstrDto)">
+            <summary>
+            编辑/新增预约配置信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptConfigMstrController.DeleteCrmAptConfig(System.String)">
+            <summary>
+            删除预约配置信息
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CrmAptMstrController">
+            <summary>
+            预约管理控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmAptMstrController._crmAptMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICrmAptMstrService,SCRM.Domain.ServiceManagement.Repositories.ICrmAptMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="crmAptMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptMstrController.GetCrmAptMstrPageList(SCRM.Domain.ServiceManagement.Queries.CrmAptMstrQuery)">
+            <summary>
+            获取客户预约分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmAptMstrController.UpdateStausToComplete(System.String)">
+            <summary>
+            更新状态为已完成(弃用)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CrmCaseMstrController">
+            <summary>
+            客户反馈控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmCaseMstrController._crmCaseMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmCaseMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICrmCaseMstrService,SCRM.Domain.ServiceManagement.Repositories.ICrmCaseMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="crmCaseMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmCaseMstrController.GetCrmCasePageList(SCRM.Domain.ServiceManagement.Queries.CrmCaseMstrQuery)">
+            <summary>
+            获取客户反馈列表分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmCaseMstrController.DeleteCrmCaseInfo(System.String)">
+            <summary>
+            删除客户反馈
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CrmEvaMstrController">
+            <summary>
+            客户评价控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmEvaMstrController._crmEvaMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmEvaMstrController._crmEvaMstrRepository">
+            <summary>
+            仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmEvaMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICrmEvaMstrService,SCRM.Domain.ServiceManagement.Repositories.ICrmEvaMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="crmEvaMstrService">服务</param>
+            <param name="iCrmEvaMstrRepository">仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmEvaMstrController.GetCrmEvaPageList(SCRM.Domain.ServiceManagement.Queries.CrmEvaMstrQuery)">
+            <summary>
+            获取客户评价分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmEvaMstrController.ExportCrmEvaData(SCRM.Domain.ServiceManagement.Queries.CrmEvaMstrQuery)">
+            <summary>
+            导出评价数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmEvaMstrController.ReplyCrmEvaInfo(System.String,System.String)">
+            <summary>
+            回复评价
+            </summary>
+            <param name="id">主键id</param>
+            <param name="evaContent">回复内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmEvaMstrController.DelCrmEvaInfo(System.String)">
+            <summary>
+            删除评价
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmEvaMstrController.GetMessageCenterPageList(SCRM.Domain.ServiceManagement.Queries.CrmEvaMstrQuery)">
+            <summary>
+            获取客户评价分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmEvaMstrController.ReplyMessage(System.String,System.String)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="id">主键id</param>
+            <param name="evaContent">回复内容</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController">
+            <summary>
+            控制器(套卷管理表：CRM_QPAPER_MSTR)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController._crmQpaperMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICrmQpaperMstrService,SCRM.Domain.ServiceManagement.Repositories.ICrmQpaperMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="crmQpaperMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController.GetQpaperMstrPageList(SCRM.Domain.ServiceManagement.Queries.CrmQpaperMstrQuery)">
+            <summary>
+            获取套卷分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController.GetQpaperQuInfoById(System.String)">
+            <summary>
+            根据id获取套卷信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController.EnableQpaperInfo(System.String)">
+            <summary>
+            启用/禁用套卷
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController.DelQpaperMstrInfo(System.String)">
+            <summary>
+            删除套卷
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperMstrController.CreateQpaperMstrInfo(SCRM.Application.ServiceManagement.Dtos.CrmQpaperMstrDto)">
+            <summary>
+            创建套卷
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CrmQpaperQuController">
+            <summary>
+            控制器(题目表：CRM_QPAPER_QU)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmQpaperQuController._crmQpaperQuService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperQuController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICrmQpaperQuService,SCRM.Domain.ServiceManagement.Repositories.ICrmQpaperQuRepository)">
+            <summary>
+            初始化控制器
+            <param name="crmQpaperQuService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperQuController.GetQpaperQuPageList(SCRM.Domain.ServiceManagement.Queries.CrmQpaperQuQuery)">
+            <summary>
+            获取题目分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperQuController.GetQpaperQuInfoById(System.String)">
+            <summary>
+            根据id获取题目信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperQuController.SaveQpaperQuInfo(SCRM.Application.ServiceManagement.Dtos.CrmQpaperQuDto)">
+            <summary>
+            编辑/新增题目
+            </summary>
+            <param name="crmQpaperQuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmQpaperQuController.DelQpaperQuInfo(System.String)">
+            <summary>
+            删除题目
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.CrmSurveyRsltMstrController">
+            <summary>
+            控制器（问卷表：CRM_SURVEY_RSLT_MSTR）
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.CrmSurveyRsltMstrController._crmSurveyRsltMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmSurveyRsltMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.ICrmSurveyRsltMstrService,SCRM.Domain.ServiceManagement.Repositories.ICrmSurveyRsltMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="crmSurveyRsltMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmSurveyRsltMstrController.GetSurveyRsltPageList(SCRM.Domain.ServiceManagement.Queries.CrmSurveyRsltMstrQuery)">
+            <summary>
+            分页获取问卷信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.CrmSurveyRsltMstrController.GetSurveyRsltInfoById(System.String)">
+            <summary>
+            根据id获取问卷详情信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.FinanceTagConfigController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.FinanceTagConfigController._financeTagConfigService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.FinanceTagConfigController.#ctor(SCRM.Application.ServiceManagement.Contracts.IFinanceTagConfigService)">
+            <summary>
+            初始化控制器
+            <param name="financeTagConfigService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.FinanceTagConfigController.GetFinaceTagList">
+            <summary>
+            获取门店配置标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.FinanceTagConfigController.SaveTagInfo(SCRM.Application.ServiceManagement.Dtos.FinanceTagConfigDto)">
+            <summary>
+            保存金融标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.FinanceTagConfigController.DeleteTagInfo(System.String)">
+            <summary>
+            保存金融标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.MdmMsgConfigController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.MdmMsgConfigController._mdmMsgConfigService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.MdmMsgConfigController.#ctor(SCRM.Application.ServiceManagement.Contracts.IMdmMsgConfigService)">
+            <summary>
+            初始化控制器
+            <param name="mdmMsgConfigService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.MdmMsgConfigController.GetSectedMsgConfig">
+            <summary>
+            获取消息提醒
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.MdmMsgConfigController.SaveMsgConfig(System.Collections.Generic.List{SCRM.Application.ServiceManagement.Dtos.MdmMsgConfigDto})">
+            <summary>
+            保存消息提醒配置
+            </summary>
+            <param name="msgList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.ResFileMstrController">
+            <summary>
+            控制器(车型图片维护：RES_FILE_MSTR)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.ResFileMstrController._resFileMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.ResFileMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.IResFileMstrService)">
+            <summary>
+            初始化控制器
+            <param name="resFileMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.ResFileMstrController.GetErpCarList">
+            <summary>
+            获取erp车型数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.ResFileMstrController.SaveResFileInfo(System.String,System.String,System.String)">
+            <summary>
+            保存车型关联图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController">
+            <summary>
+            控制器(门店宣传：store_advertise_mstr)
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController._storeAdvertiseMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.IStoreAdvertiseMstrService,SCRM.Domain.ServiceManagement.Repositories.IStoreAdvertiseMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="storeAdvertiseMstrService">服务</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController.GetStoreAdvertisePageList(SCRM.Domain.ServiceManagement.Queries.StoreAdvertiseMstrQuery)">
+            <summary>
+            获取保险续保分页数据
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController.GetStoreAdvertiseInfoById(System.String)">
+            <summary>
+            根据id获取保险续保信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController.EnableAdvertise(System.String)">
+            <summary>
+            启用/禁用保险续保
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController.DeleteAdvertise(System.String)">
+            <summary>
+            删除保险续保
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.StoreAdvertiseMstrController.InsertAdvertise(SCRM.Application.ServiceManagement.Dtos.StoreAdvertiseMstrDto)">
+            <summary>
+            创建保险续保
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController">
+            <summary>
+            紧急救援控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController._wctHelpTelMstrService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController._iWctHelpTelMstrRepository">
+            <summary>
+            救援仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController.#ctor(SCRM.Application.ServiceManagement.Contracts.IWctHelpTelMstrService,SCRM.Domain.ServiceManagement.Repositories.IWctHelpTelMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctHelpTelMstrService">服务</param>
+            <param name="iWctHelpTelMstrRepository">救援仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController.GetHelpTelPageList(SCRM.Domain.ServiceManagement.Queries.WctHelpTelMstrQuery)">
+            <summary>
+            分页获取救援信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController.GetHelpTelInfoById(System.String)">
+            <summary>
+            根据id获取救援信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController.SaveHelpTelInfo(SCRM.Application.ServiceManagement.Dtos.WctHelpTelMstrDto)">
+            <summary>
+            编辑/新增救援信息
+            </summary>
+            <param name="helpDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.ServiceManagement.WctHelpTelMstrController.DelHelpTelInfo(System.String)">
+            <summary>
+            删除救援信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.MdmBasRegionController">
+            <summary>
+            省市地控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmBasRegionController._mdmBasRegionService">
+            <summary>
+            省市地服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmBasRegionController._mdmBasRegionRepository">
+            <summary>
+            省市地仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBasRegionController.#ctor(SCRM.Application.System.Contracts.IMdmBasRegionService,SCRM.Domain.System.Repositories.IMdmBasRegionRepository)">
+            <summary>
+            初始化控制器
+            <param name="mdmBasRegionService">省市地服务</param>
+            <param name="mdmBasRegionRepository">省市地仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBasRegionController.GetMdmBasRegionList(SCRM.Domain.System.Queries.MdmBasRegionQuery)">
+            <summary>
+            获取省市地列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.MdmBuMstrController">
+            <summary>
+            机构控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmBuMstrController._mdmBuMstrService">
+            <summary>
+            机构服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmBuMstrController._mdmBuMstrRepository">
+            <summary>
+            机构仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBuMstrController.#ctor(SCRM.Application.System.Contracts.IMdmBuMstrService,SCRM.Domain.System.Repositories.IMdmBuMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="mdmBuMstrService">机构服务</param>
+            <param name="mdmBuMstrRepository">机构仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBuMstrController.GetMdmBuMstrList(SCRM.Domain.System.Queries.MdmBuMstrQuery)">
+            <summary>
+            获取机构列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBuMstrController.GetMdmBuMstrPageList(SCRM.Domain.System.Queries.MdmBuMstrQuery)">
+            <summary>
+            获取机构分页列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBuMstrController.GetMdmBuInfo(System.String)">
+            <summary>
+            获取机构详情
+            </summary>
+            <param name="buNo">机构编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBuMstrController.SaveMdmBuInfo(SCRM.Application.System.Dtos.MdmBuMstrDto)">
+            <summary>
+            保存机构信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmBuMstrController.DelBuInfo(System.String)">
+            <summary>
+            删除机构信息
+            </summary>
+            <param name="buNos">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.MdmDeptMstrController">
+            <summary>
+            部门控制器
+            </summary>、
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmDeptMstrController._mdmDeptMstrService">
+            <summary>
+            部门服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmDeptMstrController._mdmDeptMstrRepository">
+            <summary>
+            部门仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDeptMstrController.#ctor(SCRM.Application.System.Contracts.IMdmDeptMstrService,SCRM.Domain.System.Repositories.IMdmDeptMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="mdmDeptMstrService">部门服务</param>
+            <param name="mdmDeptMstrRepository">部门仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDeptMstrController.GetMdmDeptPageList(SCRM.Domain.System.Queries.MdmDeptMstrQuery)">
+            <summary>
+            获取部门分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDeptMstrController.GetMdmDeptList">
+            <summary>
+            获取部门列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDeptMstrController.GetMdmDeptInfo(System.Decimal)">
+            <summary>
+            获取部门详情
+            </summary>
+            <param name="deptId">部门id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDeptMstrController.SaveMdmDeptfo(SCRM.Application.System.Dtos.MdmDeptMstrDto)">
+            <summary>
+            保存部门信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDeptMstrController.DelMdmDeptInfo(System.String)">
+            <summary>
+            删除部门信息
+            </summary>
+            <param name="deptIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.MdmDutyMstrController">
+            <summary>
+            职务控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmDutyMstrController._mdmDutyMstrService">
+            <summary>
+            职务服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.MdmDutyMstrController._mdmDutyMstrRepository">
+            <summary>
+            职务仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDutyMstrController.#ctor(SCRM.Application.System.Contracts.IMdmDutyMstrService,SCRM.Domain.System.Repositories.IMdmDutyMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="mdmDutyMstrService">职务服务</param>
+            <param name="mdmDutyMstrRepository">职务仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDutyMstrController.GetMdmDutyPageList(SCRM.Domain.System.Queries.MdmDutyMstrQuery)">
+            <summary>
+            获取职务分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDutyMstrController.GetMdmDutyList">
+            <summary>
+            获取职务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDutyMstrController.GetMdmDutyInfo(System.Decimal)">
+            <summary>
+            获取职务详情
+            </summary>
+            <param name="dutyId">职务id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDutyMstrController.SaveMdmDutyInfo(SCRM.Application.System.Dtos.MdmDutyMstrDto)">
+            <summary>
+            保存职务信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.MdmDutyMstrController.DelMdmDutyInfo(System.String)">
+            <summary>
+            删除职务信息
+            </summary>
+            <param name="dutyIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.SysRoleMstrController">
+            <summary>
+            角色控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.SysRoleMstrController._sysRoleMstrService">
+            <summary>
+            角色服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.SysRoleMstrController._sysRoleMstrRepository">
+            <summary>
+            角色仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysRoleMstrController.#ctor(SCRM.Application.System.Contracts.ISysRoleMstrService,SCRM.Domain.System.Repositories.ISysRoleMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="sysRoleMstrService">角色服务</param>
+            <param name="sysRoleMstrRepository">角色仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysRoleMstrController.GetRoleList(System.Nullable{System.Decimal})">
+            <summary>
+            获取角色权限列表
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysRoleMstrController.GetRoleInfo(System.Nullable{System.Decimal})">
+            <summary>
+            获取角色详情
+            </summary>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysRoleMstrController.GetRolePageList(SCRM.Domain.System.Queries.SysRoleMstrQuery)">
+            <summary>
+            获取角色权限分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysRoleMstrController.SaveSysRoleInfo(SCRM.Application.System.Dtos.SysRoleMstrDto)">
+            <summary>
+            保存角色信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysRoleMstrController.DelSysRoleInfo(System.String)">
+            <summary>
+            删除角色信息
+            </summary>
+            <param name="roleIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.SysUsrAuthController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.SysUsrAuthController._sysUsrAuthService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrAuthController.#ctor(SCRM.Application.System.Contracts.ISysUsrAuthService)">
+            <summary>
+            初始化控制器
+            <param name="sysUsrAuthService">服务</param>
+            </summary>
+        </member>
+        <member name="T:SCRM.Controllers.System.SysUsrMstrController">
+            <summary>
+            用户控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.SysUsrMstrController._sysUsrMstrService">
+            <summary>
+            用户表服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.SysUsrMstrController._sysUsrMstrRepository">
+            <summary>
+            用户表仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.#ctor(SCRM.Application.System.Contracts.ISysUsrMstrService,SCRM.Domain.System.Repositories.ISysUsrMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="sysUsrMstrService">用户表服务</param>
+            <param name="sysUsrMstrRepository">用户表仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.Login(SCRM.Domain.System.Queries.SysUsrMstrQuery)">
+            <summary>
+            查询用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.CreateCaptcha(BZM.SCRM.Domain.Common.ReportModels.CreateCaptcha)">
+            <summary>
+            生成验证码图片
+            </summary>
+            <returns>验证码图片</returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.GetSysUsrPageList(SCRM.Domain.System.Queries.SysUsrMstrQuery)">
+            <summary>
+            获取员工分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.GetSysUsrInfo(System.Decimal)">
+            <summary>
+            获取用户详情
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.SaveSysUsrInfo(SCRM.Application.System.Dtos.SysUsrMstrDto)">
+            <summary>
+            保存用户信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.DelSysUsrInfo(System.String)">
+            <summary>
+            删除用户信息
+            </summary>
+            <param name="userIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.ResetPassWord(System.Nullable{System.Decimal})">
+            <summary>
+            重置密码
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.SysUsrMstrController.GetSysUsrMstrNavTree">
+            <summary>
+            获取角色菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.WctBasConfigController">
+            <summary>
+            基础配置控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.WctBasConfigController._wctBasConfigService">
+            <summary>
+            基础配置服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.WctBasConfigController._wctBasConfigRepository">
+            <summary>
+            基础配置仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctBasConfigController.#ctor(SCRM.Application.System.Contracts.IWctBasConfigService,SCRM.Domain.System.Repositories.IWctBasConfigRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctBasConfigService">基础配置服务</param>
+            <param name="wctBasConfigRepository">基础配置仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctBasConfigController.GetWctBasConfigInfo">
+            <summary>
+            获取基础配置详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctBasConfigController.SaveWctBasConfigInfo(SCRM.Application.System.Dtos.WctBasConfigDto)">
+            <summary>
+            保存基础配置详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.WctPaMstrController">
+            <summary>
+            公众号控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.WctPaMstrController._wctPaMstrService">
+            <summary>
+            公众号服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.WctPaMstrController._wctPaMstrRepository">
+            <summary>
+            公众号仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctPaMstrController.#ctor(SCRM.Application.System.Contracts.IWctPaMstrService,SCRM.Domain.System.Repositories.IWctPaMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctPaMstrService">公众号服务</param>
+            <param name="wctPaMstrRepository">公众号仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctPaMstrController.GetWctPaMstrPageList(SCRM.Domain.System.Queries.WctPaMstrQuery)">
+            <summary>
+            获取公众号分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctPaMstrController.GetPaMstrInfo(System.String)">
+            <summary>
+            获取公众号详情
+            </summary>
+            <param name="paId">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctPaMstrController.SavePaInfo(SCRM.Application.System.Dtos.WctPaMstrDto)">
+            <summary>
+            保存公众号信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctPaMstrController.DelPaInfo(System.String)">
+            <summary>
+            删除公众号信息
+            </summary>
+            <param name="paIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.System.WctSysmoduleMstrController">
+            <summary>
+            系统模块控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.WctSysmoduleMstrController._wctSysmoduleMstrService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.System.WctSysmoduleMstrController._wctSysmoduleMstrRepository">
+            <summary>
+            系统模块仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctSysmoduleMstrController.#ctor(SCRM.Application.System.Contracts.IWctSysmoduleMstrService,SCRM.Domain.System.Repositories.IWctSysmoduleMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctSysmoduleMstrService">系统模块服务</param>
+            <param name="wctSysmoduleMstrRepository">系统模块仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctSysmoduleMstrController.GetSysModulePageList(SCRM.Domain.System.Queries.WctSysmoduleMstrQuery)">
+            <summary>
+            获取系统模块分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctSysmoduleMstrController.GetSysModuleList">
+            <summary>
+            获取系统模块列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctSysmoduleMstrController.GetSysModuleInfo(System.String)">
+            <summary>
+            获取系统模块详情
+            </summary>
+            <param name="sysModuleId">系统模块id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctSysmoduleMstrController.SaveSysMoudleInfo(SCRM.Application.System.Dtos.WctSysmoduleMstrDto)">
+            <summary>
+            保存系统模块信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.System.WctSysmoduleMstrController.DelSysMoudleInfo(System.String)">
+            <summary>
+            删除系统模块信息
+            </summary>
+            <param name="sysModuleIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.WeChatPlatform.SysUsrWctController">
+            <summary>
+            微信粉丝控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.SysUsrWctController._sysUsrWctService">
+            <summary>
+            微信粉丝服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.SysUsrWctController._sysUsrWctRepository">
+            <summary>
+            微信粉丝仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.SysUsrWctController.#ctor(SCRM.Application.WeChatPlatform.Contracts.ISysUsrWctService,SCRM.Domain.WeChatPlatform.Repositories.ISysUsrWctRepository)">
+            <summary>
+            初始化控制器
+            <param name="sysUsrWctService">微信粉丝服务</param>
+            <param name="sysUsrWctRepository">微信粉丝仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.SysUsrWctController.GetWctInfoPageList(SCRM.Domain.WeChatPlatform.Queries.SysUsrWctQuery)">
+            <summary>
+            分页获取粉丝信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.SysUsrWctController.WctMakeTag(SCRM.Application.WeChatPlatform.Dtos.SysUsrWctDto)">
+            <summary>
+            粉丝打标签
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.SysUsrWctController.UpdateFansBlackStatus(SCRM.Domain.WeChatPlatform.Queries.SysUsrWctQuery)">
+            <summary>
+            更改粉丝黑名单状态
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.WeChatPlatform.TagHistController">
+            <summary>
+            粉丝标签记录控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.TagHistController._tagHistService">
+            <summary>
+            粉丝标签记录服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.TagHistController._tagHistRepository">
+            <summary>
+            粉丝标签记录仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagHistController.#ctor(SCRM.Application.WeChatPlatform.Contracts.ITagHistService,SCRM.Domain.WeChatPlatform.Repositories.ITagHistRepository)">
+            <summary>
+            初始化控制器
+            <param name="tagHistService">粉丝标签记录服务</param>
+            <param name="tagHistRepository">粉丝标签记录仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagHistController.GetWctTagHistList(System.String)">
+            <summary>
+            获取粉丝标签列表
+            </summary>
+            <param name="wctId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.WeChatPlatform.TagMstrController">
+            <summary>
+            标签控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.TagMstrController._tagMstrService">
+            <summary>
+            标签服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.TagMstrController._tagMstrRepository">
+            <summary>
+            标签仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagMstrController.#ctor(SCRM.Application.WeChatPlatform.Contracts.ITagMstrService,SCRM.Domain.WeChatPlatform.Repositories.ITagMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="tagMstrService">标签服务</param>
+            <param name="tagMstrRepository">标签仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagMstrController.GetTagMstrPageList(SCRM.Domain.WeChatPlatform.Queries.TagMstrQuery)">
+            <summary>
+            获取标签分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagMstrController.GetTagMstrList(SCRM.Domain.WeChatPlatform.Queries.TagMstrQuery)">
+            <summary>
+            获取标签列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagMstrController.GetTagInfo(System.String)">
+            <summary>
+            获取标签信息详情
+            </summary>
+            <param name="tagId">标签id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagMstrController.SaveTagInfo(SCRM.Application.WeChatPlatform.Dtos.TagMstrDto)">
+            <summary>
+            保存标签信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.TagMstrController.DelTagInfo(System.String)">
+            <summary>
+            删除标签信息
+            </summary>
+            <param name="tagId">主键</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.WeChatPlatform.WctAppMstrController">
+            <summary>
+            微信app控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctAppMstrController._wctAppMstrService">
+            <summary>
+            微信app服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctAppMstrController._wctAppMstrRepository">
+            <summary>
+            微信app仓储
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctAppMstrController._wctSysmoduleMstrRepository">
+            <summary>
+            系统模块仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctAppMstrController.#ctor(SCRM.Application.WeChatPlatform.Contracts.IWctAppMstrService,SCRM.Domain.WeChatPlatform.Repositories.IWctAppMstrRepository,SCRM.Domain.System.Repositories.IWctSysmoduleMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctAppMstrService">微信app服务</param>
+            <param name="wctAppMstrRepository">微信app仓储</param>
+            <param name="wctSysmoduleMstrRepository">系统模块仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctAppMstrController.GetAppMstrInfo">
+            <summary>
+            获取门店app应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctAppMstrController.GetAppItemInfo(System.String)">
+            <summary>
+            获取门店app子应用
+            </summary>
+            <param name="appId">app应用id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctAppMstrController.GetFirstModuleInfo">
+            <summary>
+            获取一级app应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctAppMstrController.SaveAppInfo(SCRM.Application.WeChatPlatform.Dtos.WctAppMstrDto)">
+            <summary>
+            保存app菜单信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctAppMstrController.DelAppInfo(System.String)">
+            <summary>
+            删除app菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.WeChatPlatform.WctMenuMstrController">
+            <summary>
+            微信菜单控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctMenuMstrController._wctMenuMstrService">
+            <summary>
+            微信菜单服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctMenuMstrController._wctMenuMstrRepository">
+            <summary>
+            微信菜单仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctMenuMstrController.#ctor(SCRM.Application.WeChatPlatform.Contracts.IWctMenuMstrService,SCRM.Domain.WeChatPlatform.Repositories.IWctMenuMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctMenuMstrService">微信菜单服务</param>
+            <param name="wctMenuMstrRepository">微信菜单仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctMenuMstrController.GetWxMenuList(SCRM.Domain.WeChatPlatform.Queries.WctMenuMstrQuery)">
+            <summary>
+            获取微信菜单列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctMenuMstrController.SaveWxMenuInfo(SCRM.Application.WeChatPlatform.Dtos.WctMenuMstrDto)">
+            <summary>
+            保存微信菜单列表
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctMenuMstrController.DelWxMenuInfo(System.String)">
+            <summary>
+            删除微信菜单
+            </summary>
+            <param name="menuId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctMenuMstrController.PublishWxMenu">
+            <summary>
+            发布微信菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCRM.Controllers.WeChatPlatform.WctPushMsgController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctPushMsgController._wctPushMsgService">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctPushMsgController.#ctor(SCRM.Application.WeChatPlatform.Contracts.IWctPushMsgService)">
+            <summary>
+            初始化控制器
+            <param name="wctPushMsgService">服务</param>
+            </summary>
+        </member>
+        <member name="T:SCRM.Controllers.WeChatPlatform.WctReplyMstrController">
+            <summary>
+            回复控制器
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctReplyMstrController._wctReplyMstrService">
+            <summary>
+            回复服务
+            </summary>
+        </member>
+        <member name="F:SCRM.Controllers.WeChatPlatform.WctReplyMstrController._wctReplyMstrRepository">
+            <summary>
+            回复仓储
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctReplyMstrController.#ctor(SCRM.Application.WeChatPlatform.Contracts.IWctReplyMstrService,SCRM.Domain.WeChatPlatform.Repositories.IWctReplyMstrRepository)">
+            <summary>
+            初始化控制器
+            <param name="wctReplyMstrService">回复服务</param>
+            <param name="wctReplyMstrRepository">回复仓储</param>
+            </summary>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctReplyMstrController.GetReplyPageList(SCRM.Domain.WeChatPlatform.Queries.WctReplyMstrQuery)">
+            <summary>
+            获取回复信息分页列表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctReplyMstrController.GetReplyInfo(System.String)">
+            <summary>
+            获取回复信息详情
+            </summary>
+            <param name="replyId">系统模块id</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctReplyMstrController.SaveReplyInfo(SCRM.Application.WeChatPlatform.Dtos.WctReplyMstrDto)">
+            <summary>
+            保存回复信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctReplyMstrController.DelReplyInfo(System.String)">
+            <summary>
+            删除回复信息
+            </summary>
+            <param name="replyIds">主键,隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCRM.Controllers.WeChatPlatform.WctReplyMstrController.UpdateReplyStatus(SCRM.Domain.WeChatPlatform.Queries.WctReplyMstrQuery)">
+            <summary>
+            更新回复信息状态
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

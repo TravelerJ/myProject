@@ -1,0 +1,171 @@
+﻿using SCRM.Domain.MallManagement.Entitys;
+
+namespace SCRM.Application.MallManagement.Dtos
+{
+    /// <summary>
+    /// 数据传输对象扩展
+    /// </summary>
+    public static class MdmGoodsListDtoExtension {    
+        /// <summary>
+        /// 转换为实体
+        /// </summary>
+        /// <param name="dto">数据传输对象</param>
+        public static MdmGoodsList ToEntity( this MdmGoodsListDto dto ) {
+            if( dto == null )
+                return new MdmGoodsList();
+            return new MdmGoodsList() {
+                Id = dto.Id,
+                GL_NO = dto.GL_NO,
+                GL_NAME = dto.GL_NAME,
+                GL_PRINT_NAME = dto.GL_PRINT_NAME,
+                GL_TYPE = dto.GL_TYPE,
+                GL_LARGECLASS = dto.GL_LARGECLASS,
+                GL_INCLASS = dto.GL_INCLASS,
+                GL_SMALLCLASS = dto.GL_SMALLCLASS,
+                GL_SUBCLASS = dto.GL_SUBCLASS,
+                GL_LEVEL = dto.GL_LEVEL,
+                CAR_BRAND_ID = dto.CAR_BRAND_ID,
+                CAR_BRAND_DESC = dto.CAR_BRAND_DESC,
+                CAR_CLASS_ID = dto.CAR_CLASS_ID,
+                CAR_CLASS_DESC = dto.CAR_CLASS_DESC,
+                CAR_TYPE_ID = dto.CAR_TYPE_ID,
+                CAR_TYPE_DESC = dto.CAR_TYPE_DESC,
+                GL_UNIT = dto.GL_UNIT,
+                MNEMONIC_CODE = dto.MNEMONIC_CODE,
+                GL_SPEC = dto.GL_SPEC,
+                GL_MODEL = dto.GL_MODEL,
+                GL_MATERIAL = dto.GL_MATERIAL,
+                GL_SHELFLIFE = dto.GL_SHELFLIFE,
+                MADE_IN = dto.MADE_IN,
+                GL_STATUS = dto.GL_STATUS,
+                BU_NO = dto.BU_NO,
+                GL_RMK = dto.GL_RMK,
+                GL_PROPERTY = dto.GL_PROPERTY,
+                COMMENT_NUM = dto.COMMENT_NUM,
+                HIT_NUM = dto.HIT_NUM,
+                PROMOTION_INFO = dto.PROMOTION_INFO,
+                GL_DESC = dto.GL_DESC,
+                GL_SPEC_DESC = dto.GL_SPEC_DESC,
+                GL_PACKAGE_DESC = dto.GL_PACKAGE_DESC,
+                GL_DESC_M = dto.GL_DESC_M,
+                GL_SPEC_DESC_M = dto.GL_SPEC_DESC_M,
+                GL_PACKAGE_DESC_M = dto.GL_PACKAGE_DESC_M,
+                GL_WARRANTY_DESC = dto.GL_WARRANTY_DESC,
+                GL_PUR_ATTR = dto.GL_PUR_ATTR,
+                GL_QA = dto.GL_QA,
+                GL_BRAND = dto.GL_BRAND,
+                GL_FUNC = dto.GL_FUNC,
+                IS_COMBO = dto.IS_COMBO,
+                GOODS_ATTR = dto.GOODS_ATTR,
+                LGS_SP = dto.LGS_SP,
+                LGS_SP_NO = dto.LGS_SP_NO,
+                GL_SDATE = dto.GL_SDATE,
+                GL_EDATE = dto.GL_EDATE,
+                UDF1 = dto.UDF1,
+                UDF2 = dto.UDF2,
+                UDF3 = dto.UDF3,
+                UDF4 = dto.UDF4,
+                UDF5 = dto.UDF5,
+                UDF6 = dto.UDF6,
+                UDF7 = dto.UDF7,
+                UDF8 = dto.UDF8,
+                UDF9 = dto.UDF9,
+                UDF10 = dto.UDF10,
+                CREATE_PSN = dto.CREATE_PSN,
+                CREATE_DATE = dto.CREATE_DATE,
+                UPDATE_PSN = dto.UPDATE_PSN,
+                UPDATE_DATE = dto.UPDATE_DATE,
+                CREATE_ORG_NO = dto.CREATE_ORG_NO,
+                DEL_FLAG = dto.DEL_FLAG,
+                PROMOTION_ATTR = dto.PROMOTION_ATTR,
+                BG_NO = dto.BG_NO,
+                MEMBER_PRICE = dto.MEMBER_PRICE,
+                MENBER_POINTS = dto.MENBER_POINTS,
+                ENABLE_MP = dto.ENABLE_MP,
+                GOODS_SALES = dto.GOODS_SALES,
+                IS_ERPGOODS = dto.IS_ERPGOODS
+            };
+        }
+        
+        /// <summary>
+        /// 转换为数据传输对象
+        /// </summary>
+        /// <param name="entity">实体</param>
+        public static MdmGoodsListDto ToDto( this MdmGoodsList entity ) {
+             if( entity == null )
+                return new MdmGoodsListDto();
+            return new MdmGoodsListDto {
+                Id = entity.Id,
+                GL_NO = entity.GL_NO,      
+                GL_NAME = entity.GL_NAME,      
+                GL_PRINT_NAME = entity.GL_PRINT_NAME,      
+                GL_TYPE = entity.GL_TYPE,      
+                GL_LARGECLASS = entity.GL_LARGECLASS,      
+                GL_INCLASS = entity.GL_INCLASS,      
+                GL_SMALLCLASS = entity.GL_SMALLCLASS,      
+                GL_SUBCLASS = entity.GL_SUBCLASS,      
+                GL_LEVEL = entity.GL_LEVEL,      
+                CAR_BRAND_ID = entity.CAR_BRAND_ID,      
+                CAR_BRAND_DESC = entity.CAR_BRAND_DESC,      
+                CAR_CLASS_ID = entity.CAR_CLASS_ID,      
+                CAR_CLASS_DESC = entity.CAR_CLASS_DESC,      
+                CAR_TYPE_ID = entity.CAR_TYPE_ID,      
+                CAR_TYPE_DESC = entity.CAR_TYPE_DESC,      
+                GL_UNIT = entity.GL_UNIT,      
+                MNEMONIC_CODE = entity.MNEMONIC_CODE,      
+                GL_SPEC = entity.GL_SPEC,      
+                GL_MODEL = entity.GL_MODEL,      
+                GL_MATERIAL = entity.GL_MATERIAL,      
+                GL_SHELFLIFE = entity.GL_SHELFLIFE,      
+                MADE_IN = entity.MADE_IN,      
+                GL_STATUS = entity.GL_STATUS,      
+                BU_NO = entity.BU_NO,      
+                GL_RMK = entity.GL_RMK,      
+                GL_PROPERTY = entity.GL_PROPERTY,      
+                COMMENT_NUM = entity.COMMENT_NUM,      
+                HIT_NUM = entity.HIT_NUM,      
+                PROMOTION_INFO = entity.PROMOTION_INFO,      
+                GL_DESC = entity.GL_DESC,      
+                GL_SPEC_DESC = entity.GL_SPEC_DESC,      
+                GL_PACKAGE_DESC = entity.GL_PACKAGE_DESC,      
+                GL_DESC_M = entity.GL_DESC_M,      
+                GL_SPEC_DESC_M = entity.GL_SPEC_DESC_M,      
+                GL_PACKAGE_DESC_M = entity.GL_PACKAGE_DESC_M,      
+                GL_WARRANTY_DESC = entity.GL_WARRANTY_DESC,      
+                GL_PUR_ATTR = entity.GL_PUR_ATTR,      
+                GL_QA = entity.GL_QA,      
+                GL_BRAND = entity.GL_BRAND,      
+                GL_FUNC = entity.GL_FUNC,      
+                IS_COMBO = entity.IS_COMBO,      
+                GOODS_ATTR = entity.GOODS_ATTR,      
+                LGS_SP = entity.LGS_SP,      
+                LGS_SP_NO = entity.LGS_SP_NO,      
+                GL_SDATE = entity.GL_SDATE,      
+                GL_EDATE = entity.GL_EDATE,      
+                UDF1 = entity.UDF1,      
+                UDF2 = entity.UDF2,      
+                UDF3 = entity.UDF3,      
+                UDF4 = entity.UDF4,      
+                UDF5 = entity.UDF5,      
+                UDF6 = entity.UDF6,      
+                UDF7 = entity.UDF7,      
+                UDF8 = entity.UDF8,      
+                UDF9 = entity.UDF9,      
+                UDF10 = entity.UDF10,      
+                CREATE_PSN = entity.CREATE_PSN,      
+                CREATE_DATE = entity.CREATE_DATE,      
+                UPDATE_PSN = entity.UPDATE_PSN,      
+                UPDATE_DATE = entity.UPDATE_DATE,      
+                CREATE_ORG_NO = entity.CREATE_ORG_NO,      
+                DEL_FLAG = entity.DEL_FLAG,      
+                PROMOTION_ATTR = entity.PROMOTION_ATTR,      
+                BG_NO = entity.BG_NO,      
+                MEMBER_PRICE = entity.MEMBER_PRICE,      
+                MENBER_POINTS = entity.MENBER_POINTS,      
+                ENABLE_MP = entity.ENABLE_MP,      
+                GOODS_SALES = entity.GOODS_SALES,      
+                IS_ERPGOODS = entity.IS_ERPGOODS
+            };
+        }
+    }
+}

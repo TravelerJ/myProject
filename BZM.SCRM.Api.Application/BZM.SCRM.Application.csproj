@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.2\BZM.SCRM.Application.xml</DocumentationFile>
+    <OutputPath>bin\Debug\netcoreapp2.2\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp" Version="4.0.1" />
+    <PackageReference Include="Abp.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Abp.AutoMapper" Version="4.0.1" />
+    <PackageReference Include="Abp.Quartz" Version="4.0.1" />
+    <PackageReference Include="Qiniu.NetCore" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BZM.SCRM.Domain\BZM.SCRM.Domain.csproj" />
+    <ProjectReference Include="..\BZM.SCRM.Infrastructure\BZM.SCRM.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BT.BPMLIVE.Common">
+      <HintPath>..\Reference\netstandard2.0\BT.BPMLIVE.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring">
+      <HintPath>..\Reference\netstandard2.0\Spring.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api\\BZM.SCRM.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api.Application\\BZM.SCRM.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api.Application\\BZM.SCRM.Application.csproj",
+        "projectName": "BZM.SCRM.Application",
+        "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api.Application\\BZM.SCRM.Application.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj": {
+                "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj"
+              },
+              "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\BZM.SCRM.Infrastructure.csproj": {
+                "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\BZM.SCRM.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Abp": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Abp.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Abp.AutoMapper": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Abp.Quartz": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Qiniu.NetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api\\BZM.SCRM.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api\\BZM.SCRM.Api.csproj",
+        "projectName": "BZM.SCRM.Api",
+        "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api\\BZM.SCRM.Api.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api.Application\\BZM.SCRM.Application.csproj": {
+                "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Api.Application\\BZM.SCRM.Application.csproj"
+              },
+              "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj": {
+                "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj"
+              },
+              "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\BZM.SCRM.Infrastructure.csproj": {
+                "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\BZM.SCRM.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Abp": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Abp.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Abp.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Citms.EntityFrameworkCore.Oracle": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[2.7.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[2.18.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj",
+        "projectName": "BZM.SCRM.Domain",
+        "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Abp": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Abp.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Abp.AutoMapper": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "ServiceStack.Redis": {
+              "target": "Package",
+              "version": "[5.5.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\BZM.SCRM.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\BZM.SCRM.Infrastructure.csproj",
+        "projectName": "BZM.SCRM.Infrastructure",
+        "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\BZM.SCRM.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj": {
+                "projectPath": "D:\\Project\\bzm-scrm-api\\BZM.SCRM.Domain\\BZM.SCRM.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Abp.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Citms.EntityFrameworkCore.Oracle": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[2.18.5, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

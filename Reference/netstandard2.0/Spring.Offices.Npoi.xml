@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Spring.Offices.Npoi</name>
+    </assembly>
+    <members>
+        <member name="T:Spring.Offices.Npoi.CellStyleResolver">
+            <summary>
+            单元格样式解析器
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.CellStyleResolver._workbook">
+            <summary>
+            工作薄
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.CellStyleResolver._style">
+            <summary>
+            单元格样式
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.CellStyleResolver._result">
+            <summary>
+            单元格样式
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.#ctor(NPOI.SS.UserModel.IWorkbook,Spring.Offices.CellStyle)">
+            <summary>
+            初始化单元格样式解析器
+            </summary>
+            <param name="workbook">工作薄</param>
+            <param name="style">单元格样式</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.Resolve">
+            <summary>
+            解析为Npoi单元格样式
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.GetHorizontalAlignment">
+            <summary>
+            获取水平对齐
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.GetVerticalAlignment">
+            <summary>
+            获取垂直对齐
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.SetBackgroundColor">
+            <summary>
+            设置背景色
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.SetFillPattern">
+            <summary>
+            设置填充模式
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.SetBorderColor">
+            <summary>
+            设置边框颜色
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.SetFont">
+            <summary>
+            设置字体
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.CellStyleResolver.Resolve(NPOI.SS.UserModel.IWorkbook,Spring.Offices.CellStyle)">
+            <summary>
+            解析单元格样式
+            </summary>
+            <param name="workbook">工作薄</param>
+            <param name="style">单元格样式</param>
+        </member>
+        <member name="T:Spring.Offices.Npoi.ColorResolver">
+            <summary>
+            颜色转换
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.ColorResolver.Resolve(Spring.Offices.Color)">
+            <summary>
+            转换
+            </summary>
+            <param name="color">颜色枚举</param>
+        </member>
+        <member name="T:Spring.Offices.Npoi.ExportFactory">
+            <summary>
+            导出工厂
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.ExportFactory.Create(Spring.Exports.ExportFormat)">
+            <summary>
+            创建导出
+            </summary>
+            <param name="format">导出格式</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.ExportFactory.CreateNpoiExcel2003Export">
+            <summary>
+            创建Npoi Excel 2003导出
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.ExportFactory.CreateNpoiExcel2007Export">
+            <summary>
+            创建Npoi Excel 2007导出
+            </summary>
+        </member>
+        <member name="T:Spring.Offices.Npoi.NpoiExcel2003">
+            <summary>
+            Npoi Excel2003操作
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcel2003.GetWorkbook">
+            <summary>
+            创建工作薄
+            </summary>
+        </member>
+        <member name="T:Spring.Offices.Npoi.NpoiExcel2003Export">
+            <summary>
+            Npoi Excel2003 导出操作
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcel2003Export.#ctor">
+            <summary>
+            初始化Npoi Excel2003 导出操作
+            </summary>
+        </member>
+        <member name="T:Spring.Offices.Npoi.NpoiExcel2007">
+            <summary>
+            Npoi Excel2007操作
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcel2007.GetWorkbook">
+            <summary>
+            创建工作薄
+            </summary>
+        </member>
+        <member name="T:Spring.Offices.Npoi.NpoiExcel2007Export">
+            <summary>
+            Npoi Excel2007 导出操作
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcel2007Export.#ctor">
+            <summary>
+            初始化Npoi Excel2003 导出操作
+            </summary>
+        </member>
+        <member name="T:Spring.Offices.Npoi.NpoiExcelBase">
+            <summary>
+            Npoi Excel操作
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._workbook">
+            <summary>
+            Excel工作薄
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._sheet">
+            <summary>
+            Excel工作表
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._row">
+            <summary>
+            当前行
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._cell">
+            <summary>
+            当前单元格
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._dateFormat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._headStyle">
+            <summary>
+            表头样式
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._bodyStyle">
+            <summary>
+            正文样式
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._footStyle">
+            <summary>
+            页脚样式
+            </summary>
+        </member>
+        <member name="F:Spring.Offices.Npoi.NpoiExcelBase._dateStyle">
+            <summary>
+            日期样式
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.#ctor">
+            <summary>
+            初始化Npoi操作
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.CreateWorkbook">
+            <summary>
+            创建工作薄
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.GetWorkbook">
+            <summary>
+            创建工作薄
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.CreateSheet(System.String)">
+            <summary>
+            创建工作表
+            </summary>
+            <param name="sheetName">工作表名称</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.CreateRow(System.Int32)">
+            <summary>
+            创建行
+            </summary>
+            <param name="rowIndex">行索引</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.GetOrCreateRow(System.Int32)">
+            <summary>
+            获取行，如果不存在则创建
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.CreateCell(Spring.Offices.Cell)">
+            <summary>
+            创建单元格
+            </summary>
+            <param name="cell">单元格</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.GetOrCreateCell(NPOI.SS.UserModel.IRow,System.Int32)">
+            <summary>
+            获取单元格，如果不存在则创建
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.SetCellValue(System.Object)">
+            <summary>
+            设置单元格的值
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.MergeCell(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            合并单元格
+            </summary>
+            <param name="startRowIndex">起始行索引</param>
+            <param name="endRowIndex">结束行索引</param>
+            <param name="startColumnIndex">起始列索引</param>
+            <param name="endColumnIndex">结束列索引</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.MergeCell(Spring.Offices.Cell)">
+            <summary>
+            合并单元格
+            </summary>
+            <param name="cell">单元格</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.Write(System.IO.Stream)">
+            <summary>
+            写入流
+            </summary>
+            <param name="stream">流</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.CreateDateStyle">
+            <summary>
+            创建日期样式
+            </summary>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.Style(System.Int32,System.Int32,System.Int32,System.Int32,NPOI.SS.UserModel.ICellStyle)">
+            <summary>
+            设置样式
+            </summary>
+            <param name="startRowIndex">起始行索引</param>
+            <param name="endRowIndex">结束行索引</param>
+            <param name="startColumnIndex">起始列索引</param>
+            <param name="endColumnIndex">结束列索引</param>
+            <param name="style">单元格样式</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.HeadStyle(Spring.Offices.Table,Spring.Offices.CellStyle)">
+            <summary>
+            设置表头样式
+            </summary>
+            <param name="table">表格</param>
+            <param name="style">单元格样式</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.BodyStyle(Spring.Offices.Table,Spring.Offices.CellStyle)">
+            <summary>
+            设置正文样式
+            </summary>
+            <param name="table">表格</param>
+            <param name="style">单元格样式</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.FootStyle(Spring.Offices.Table,Spring.Offices.CellStyle)">
+            <summary>
+            设置页脚样式
+            </summary>
+            <param name="table">表格</param>
+            <param name="style">单元格样式</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.DateFormat(System.String)">
+            <summary>
+            设置日期格式
+            </summary>
+            <param name="format">日期格式，默认"yyyy-mm-dd"</param>
+        </member>
+        <member name="M:Spring.Offices.Npoi.NpoiExcelBase.ColumnWidth(System.Int32,System.Int32)">
+            <summary>
+            列宽
+            </summary>
+            <param name="columnIndex">列索引</param>
+            <param name="width">列宽度，设置字符数</param>
+        </member>
+    </members>
+</doc>
